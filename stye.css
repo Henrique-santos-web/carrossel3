@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+@font-face{
+    font-family: fonte1;
+    src: url(fontes/Ghastly\ Panic.ttf);
+}
+
+h1{
+    font-family: fonte1;
+    font-size: 80px;
+    font-weight: 350;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    width: 100vw;
+    background-color: #b1b1b1;
+}
+
+header{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.container{
+
+    height: 400px;
+    width: 550px;
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+
+}
+
+.imagem img{
+    height: 100%;
+    width: 100%;
+}
+
+.navegacao{
+    position: absolute; /* posição em relação ao container */
+    bottom: 20px; /* distância a partir da base */
+    left: 50%; /* distância a partir da esquerda */
+    transform: translate(-50%); /* alterar o eixo principal */
+    display: flex; /* colocar o conteúdo lado a lado */
+}
+
+.bar {
+    background-color: #8d8888; /* plano de fundo do indicador */
+    width: 30px; /* largura do indicador */
+    height: 5px; /* altura do indicador */
+    margin: 6px; /* transição no houver */
+    transition: .3s; /* espaço entre os indicadores */
+    cursor: pointer; /* ponteiro do mouse */
+}
+
+.bar:hover{
+    background-color: #422323f1;
+}
+
+input{
+    display: none; /* oculta as input do tipo radio */
+}
+
+/* formatação da barra de navegação */
+
+.imagens{
+    display: flex; /*  */
+    width: 600%; /*  */
+    height: 100%; /*  */
+}
+
+.imagem{
+    width: 16.6666666667%; /*  */
+    transition: .5s;
+}
+
+.imagem img{
+    height: 100%; /*  */
+    width: 100%;
+}
+
+#imagem1:checked ~ .img1{
+    margin-left: 0;
+}
+
+#imagem2:checked ~ .img1{
+    margin-left: -16.6666666667%;
+}
+
+#imagem3:checked ~ .img1{
+   margin-left: -33.3333333333%;  
+} 
+
+#imagem4:checked ~ .img1{
+    margin-left: -50%;
+}
+
+#imagem5:checked ~ .img1{
+    margin-left: -66.6666666667%;
+}
+
+#imagem6:checked ~ .img1{
+    margin-left: -83.3333333333%;
+}
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
